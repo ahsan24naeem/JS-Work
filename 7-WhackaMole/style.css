@@ -1,0 +1,136 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("minions.jpeg");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.8em;
+    color: #333;
+    margin: 20px 0;
+    display: inline-block;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameBoard {
+    width: 540px;
+    height: 540px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background: url("soil.jpg");
+    background-size: cover;
+    border: 5px solid white;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#score {
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.5em;
+    color: #fff;
+    margin: 0 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#gameBoard div {
+    width: 33.33%;
+    height: 33.33%;
+    background-image: url("Mario-Pipe.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+#gameBoard div:hover {
+    transform: scale(1.1);
+}
+
+#gameBoard div img {
+    width: 70%;
+    height: 70%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+#homeButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffcc00;
+    color: black;
+}
+button {
+    background-color: #ffeb3b;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #fdd835;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+        padding: 5px;
+    }
+
+    #score {
+        font-size: 1.2em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    #score, button {
+        margin: 10px 0;
+    }
+}
